@@ -1,0 +1,95 @@
+
+# Sample Event
+#     {
+#         'resource': '/ebs/{ebsVolumeId}',
+#         'path': '/ebs/vol-123456e6f62ccf1bd',
+#         'httpMethod': 'GET',
+#         'headers': None,
+#         'multiValueHeaders': None,
+#         'queryStringParameters': None,
+#         'multiValueQueryStringParameters': None,
+#         'pathParameters': {
+#             'ebsVolumeId': 'vol-123456e6f62ccf1bd'
+#         },
+#         'stageVariables': None,
+#         'requestContext': {
+#             'resourceId': 'tvkm54',
+#             'resourcePath': '/ebs/{ebsVolumeId}',
+#             'operationName': 'getEBSVolumeById',
+#             'httpMethod': 'GET',
+#             'extendedRequestId': 'dPDmhGPKIAMFiTg=',
+#             'path': '/ebs/{ebsVolumeId}',
+#             'accountId': '01234567890',
+#             'stage': 'test-invoke-stage',
+#             'domainPrefix': 'testPrefix',
+#             'requestId': 'ec2dd955-ac9e-12e9-a9c9-91ff5e1b6bf3',
+#             'identity': {
+#                 'cognitoIdentityPoolId': None,
+#                 'cognitoIdentityId': None,
+#                 'apiKey': 'test-invoke-api-key',
+#                 'principalOrgId': None,
+#                 'cognitoAuthenticationType': None,
+#                 'userArn': 'arn:aws:sts::01234567890:assumed-role/VijayTest/vijay@vijaytech.com',
+#                 'apiKeyId': 'test-invoke-api-key-id',
+#                 'userAgent': 'aws-internal/3 aws-sdk-java/1.11.563\',
+#                 'accountId': '01234567890',
+#                 'caller': 'AROBJKSOK3QTVYEM7AFNU:vijay@vijaytech.com',
+#                 'sourceIp': 'test-invoke-source-ip',
+#                 'accessKey': 'ASIAQ6IGULM5GKGPH4O5',
+#                 'cognitoAuthenticationProvider': None,
+#                 'user': 'AROAJZTOK3QTVYEM7AFNU:vijay@vijaytech.com'
+#             },
+#             'domainName': 'testPrefix.testDomainName',
+#             'apiId': '9ssxsuk38l'
+#         },
+#         'body': None,
+#         'isBase64Encoded': False
+#     }
+
+
+# Sample Event
+    # {
+    #     'resource': '/security_group/{securityGroupId}',
+    #     'path': '/security_group/sg-01234567890abcde',
+    #     'httpMethod': 'GET',
+    #     'headers': None,
+    #     'multiValueHeaders': None,
+    #     'queryStringParameters': None,
+    #     'multiValueQueryStringParameters': None,
+    #     'pathParameters': {
+    #         'securityGroupId': 'sg-01234567890abcde'
+    #     },
+    #     'stageVariables': None,
+    #     'requestContext': {
+    #         'resourceId': 'tvkm54',
+    #         'resourcePath': '/security_group/{securityGroupId}',
+    #         'operationName': 'getSecurityGroupById',
+    #         'httpMethod': 'GET',
+    #         'extendedRequestId': 'dPDmhGPKIAMFiTg=',
+    #         'path': '/security_group/{securityGroupId}',
+    #         'accountId': '01234567890',
+    #         'stage': 'test-invoke-stage',
+    #         'domainPrefix': 'testPrefix',
+    #         'requestId': 'ec2dd955-ac9e-11e9-d9c9-91ff5e1b6ab3',
+    #         'identity': {
+    #             'cognitoIdentityPoolId': None,
+    #             'cognitoIdentityId': None,
+    #             'apiKey': 'test-invoke-api-key',
+    #             'principalOrgId': None,
+    #             'cognitoAuthenticationType': None,
+    #             'userArn': 'arn:aws:sts::01234567890:assumed-role/VijayTest/vijay@vijaytech.com',
+    #             'apiKeyId': 'test-invoke-api-key-id',
+    #             'userAgent': 'aws-internal/3 aws-sdk-java/1.11.563\',
+    #             'accountId': '01234567890',
+    #             'caller': 'AROBIZSOK3QTVYEM7AFNU:vijay@vijaytech.com',
+    #             'sourceIp': 'test-invoke-source-ip',
+    #             'accessKey': 'ASJAQ5GFUKN5GKGPH1955',
+    #             'cognitoAuthenticationProvider': None,
+    #             'user': 'AROAMZSOK3QTVYEM7AABC:vijay@vijaytech.com'
+    #         },
+    #         'domainName': 'testPrefix.testDomainName',
+    #         'apiId': '9ssxsuk38l'
+    #     },
+    #     'body': None,
+    #     'isBase64Encoded': False
+    # }

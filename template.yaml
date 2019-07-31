@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  aws-infra-audit-swagger2
+
+  Sample SAM Template for aws-infra-audit-swagger2
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 60
+
+Resources:
+  AWSInfraAuditApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      DefinitionUri: swagger.yaml
+  SecurityGroupInfo:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: security_group/
+      Handler: app.lambda_handler
+      Runtime: python3.6
+      Role: arn:aws:iam::123456789012:role/AWSInfraAudit
+#      Events:
+#        HelloWorld:
+#          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+#          Properties:
+#            Path: /security_group/${securityGroupId}
+#            Method: get
+  EBSVolumeInfo:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: ebs/
+      Handler: app.lambda_handler
+      Runtime: python3.6
+      Role: arn:aws:iam::123456789012:role/AWSInfraAudit
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  SecurityGroupInfo:
+    Description: "Security Group Info Lambda Function ARN"
+    Value: !GetAtt SecurityGroupInfo.Arn
+  EBSVolumeInfo:
+    Description: "EBS Volume Info Lambda Function ARN"
+    Value: !GetAtt EBSVolumeInfo.Arn
